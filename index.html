@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Mentores - Transformando vidas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #4A90E2;
+            --secondary: #7C5CBF;
+            --accent: #50C878;
+        }
+
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background-color: #45b067;
+            color: white;
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+
+        .hero {
+            min-height: 100%;
+            padding: 80px 0px;
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-gradient-primary navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MentorFund</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mentores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-accent ms-2" href="#">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-bold mb-4">Transformando vidas a través de la mentoría</h1>
+                    <p class="lead text-muted mb-4">Conectamos mentores experimentados con personas que buscan crecer profesional y personalmente.</p>
+                    <div class="d-grid gap-2 d-md-flex">
+                        <button class="btn btn-accent btn-lg px-4">Únete como mentor</button>
+                        <button class="btn btn-outline-secondary btn-lg px-4">Conoce más</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://source.unsplash.com/random/600x400/?mentoring" class="img-fluid rounded-3 shadow" alt="Mentoría">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-4">
+                    <h2>Conoce Nuestro Impacto</h2>
+                    <p class="lead text-muted">Descubre cómo estamos transformando vidas en nuestra comunidad</p>
+                </div>
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                        <iframe 
+                            src="https://www.youtube.com/embed/TU_VIDEO_ID" 
+                            title="Fundación Mentores - Impacto en la Comunidad" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-5 bg-gradient-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Nuestra Visión</h2>
+                    <p class="lead">
+                        Ser el principal motor de empoderamiento y transformación para la comunidad hispana en los Estados Unidos, 
+                        impulsando su desarrollo integral mediante capacitación, entrenamiento y acceso a recursos que les permitan 
+                        alcanzar su máximo potencial personal, profesional y social.
+                    </p>
+                    <p class="lead">
+                        Aspiramos a construir una sociedad más equitativa, en la que los hispanos lideren con confianza, 
+                        contribuyan al bienestar colectivo y vivan plenamente sus sueños en un entorno inclusivo y próspero.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Objetivos Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Nuestra Misión</h2>
+                    <p class="lead">
+                        Capacitar, entrenar e inspirar a la comunidad hispana en los Estados Unidos para que desarrollen sus habilidades, 
+                        conocimientos y confianza, fomentando el emprendimiento, el liderazgo y la integración en la sociedad, 
+                        con el propósito de construir un futuro sostenible y lleno de oportunidades.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Objetivos Generales</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Promover el desarrollo integral de las personas hispanas.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Fomentar la equidad y la inclusión social.</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Contribuir al fortalecimiento de la comunidad hispana.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h4 mb-4">Metas de Impacto</h3>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h4 class="h5 mb-3">Corto Plazo (1-3 años)</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-arrow-right text-accent me-2"></i>1,000 beneficiarios</li>
+                                        <li class="mb-2"><i class="bi bi-arrow-right text-accent me-2"></i>20 programas</li>
+                                        <li class="mb-2"><i class="bi bi-arrow-right text-accent me-2"></i>200 mentorías</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 class="h5 mb-3">Largo Plazo (5-10 años)</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-arrow-right text-accent me-2"></i>10,000 beneficiarios</li>
+                                        <li class="mb-2"><i class="bi bi-arrow-right text-accent me-2"></i>100 programas</li>
+                                        <li class="mb-2"><i class="bi bi-arrow-right text-accent me-2"></i>2,000 mentorías</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos Digitales Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://source.unsplash.com/random/600x400/?book-guide" class="img-fluid rounded-3 shadow" alt="Libro Guía">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Recursos para tu Desarrollo</h2>
+                    <div class="mb-4">
+                        <h3 class="h4 mb-3">📚 Libro Guía "Camino al Éxito"</h3>
+                        <p class="text-muted">Descubre las estrategias probadas y herramientas prácticas que han ayudado a cientos de hispanos a alcanzar sus metas en los Estados Unidos.</p>
+                        <a href="#" class="btn btn-accent mb-4">Obtén tu copia digital</a>
+                    </div>
+                    
+                    <h3 class="h4 mb-3">🎯 Contenido Digital Premium</h3>
+                    <div class="list-group mb-4">
+                        <div class="list-group-item border-0 bg-transparent">
+                            <i class="bi bi-play-circle-fill text-primary me-2"></i>
+                            Curso en línea de Liderazgo
+                        </div>
+                        <div class="list-group-item border-0 bg-transparent">
+                            <i class="bi bi-journal-text text-primary me-2"></i>
+                            Plantillas y recursos descargables
+                        </div>
+                        <div class="list-group-item border-0 bg-transparent">
+                            <i class="bi bi-camera-video-fill text-primary me-2"></i>
+                            Webinars mensuales exclusivos
+                        </div>
+                        <div class="list-group-item border-0 bg-transparent">
+                            <i class="bi bi-people-fill text-primary me-2"></i>
+                            Acceso a comunidad privada
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary">Explorar recursos digitales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">¿Por qué elegirnos?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="bi bi-person-check fs-1 text-primary"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Mentoría Personalizada</h3>
+                            <p class="text-muted mb-0">Programas adaptados a tus necesidades específicas y objetivos personales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="bi bi-star fs-1 text-primary"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Mentores Expertos</h3>
+                            <p class="text-muted mb-0">Red de profesionales con amplia experiencia en diferentes industrias.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4">
+                                <i class="bi bi-graph-up fs-1 text-primary"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Impacto Real</h3>
+                            <p class="text-muted mb-0">Resultados medibles y seguimiento continuo de tu desarrollo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -45,6 +45,54 @@
         .feature-card:hover {
             transform: translateY(-5px);
         }
+
+        .social-float {
+            position: fixed;
+            bottom: 40px;
+            right: 10px;
+            z-index: 100;
+            background-color: #292929;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-menu {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-menu.active {
+            display: flex;
+        }
+
+        .social-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-item:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .whatsapp { background-color: #25d366; }
+        .facebook { background-color: #1877f2; }
+        .instagram { background-color: #e4405f; }
     </style>
 </head>
 <body>
@@ -243,7 +291,7 @@
                             <p class="text-muted">Todo lo que necesitas saber para iniciar y hacer crecer tu negocio en Estados Unidos.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h4 mb-0">$29.99</span>
-                                <button class="btn btn-accent">Comprar Ahora</button>
+                                <button class="btn btn-accent buy-now" data-product-name="E-book: Guía del Emprendedor Hispano" data-product-price="29.99">Comprar Ahora</button>
                             </div>
                         </div>
                     </div>
@@ -257,7 +305,7 @@
                             <p class="text-muted">12 módulos con estrategias prácticas para desarrollar tus habilidades de liderazgo.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h4 mb-0">$149.99</span>
-                                <button class="btn btn-accent">Comprar Ahora</button>
+                                <button class="btn btn-accent buy-now" data-product-name="Curso Online: Liderazgo Efectivo" data-product-price="149.99">Comprar Ahora</button>
                             </div>
                         </div>
                     </div>
@@ -271,7 +319,7 @@
                             <p class="text-muted">4 sesiones intensivas para aprender a manejar, ahorrar e invertir tu dinero.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h4 mb-0">$79.99</span>
-                                <button class="btn btn-accent">Comprar Ahora</button>
+                                <button class="btn btn-accent buy-now" data-product-name="Taller Virtual: Finanzas Personales" data-product-price="79.99">Comprar Ahora</button>
                             </div>
                         </div>
                     </div>
@@ -361,10 +409,59 @@
         </div>
     </footer>
 
-    
+    <!-- Agregar este modal después del footer y antes de los scripts -->
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Selecciona tu método de pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-lg btn-outline-primary payment-option">
+                            <i class="bi bi-paypal me-2"></i>
+                            Pagar con PayPal
+                        </button>
+                        <button class="btn btn-lg btn-outline-dark payment-option">
+                            <i class="bi bi-credit-card me-2"></i>
+                            Pagar con Tarjeta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Reemplazar el enlace de WhatsApp existente con esto -->
+    <div class="social-float">
+        <div class="social-menu" id="socialMenu">
+            <a href="https://wa.me/TUNUMERODEWHATSAPP" class="social-item whatsapp" target="_blank">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://facebook.com/TUPAGINA" class="social-item facebook" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://instagram.com/TUPAGINA" class="social-item instagram" target="_blank">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+        <a href="#" class="whatsapp-float" id="socialToggle">
+            <i class="bi bi-share" style="font-size: 20px; color: white;"></i>
+        </a>
+    </div>
+
+    <!-- Agregar antes del cierre del body -->
+    <script>
+        document.getElementById('socialToggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('socialMenu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

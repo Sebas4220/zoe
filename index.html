@@ -152,6 +152,7 @@
                             muted
                             autoplay
                             loop
+                            class="w-100"
                             poster="ruta-a-tu-imagen-de-portada.jpg">
                             <source src="./WhatsApp Video 2024-12-23 at 1.01.27 PM.mp4"  type="video/mp4">
                             Tu navegador no soporta el elemento de video.
@@ -461,6 +462,30 @@
         </a>
     </div>
 
+    <!-- Agregar antes del cierre del body -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buyButtons = document.querySelectorAll('.buy-now');
+        const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+        
+        buyButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product-name');
+                const productPrice = this.getAttribute('data-product-price');
+                // Aquí puedes usar productName y productPrice si necesitas mostrarlos en el modal
+                paymentModal.show();
+            });
+        });
+    
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Aquí puedes agregar la lógica para cada método de pago
+                alert('Redirigiendo al proceso de pago...');
+                paymentModal.hide();
+            });
+        });
+    });
+    </script>
     <!-- Agregar antes del cierre del body -->
     <script>
         document.getElementById('socialToggle').addEventListener('click', function(e) {

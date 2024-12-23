@@ -93,6 +93,27 @@
         .whatsapp { background-color: #25d366; }
         .facebook { background-color: #1877f2; }
         .instagram { background-color: #e4405f; }
+
+           /* Agregar dentro de tu bloque de estilos existente */
+   .scroll-top {
+       position: fixed;
+       bottom: 40px; /* Posicionado encima del botón de redes sociales */
+       left: 10px;
+       z-index: 100;
+       background-color: var(--primary);
+       border-radius: 100%;
+       height: 50px;
+       width: 50px;
+       display: none; /* Inicialmente oculto */
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+    .scroll-top:hover {
+       background-color: var(--secondary);
+       transform: translateY(-3px);
+   }
     </style>
 </head>
 <body>
@@ -460,7 +481,31 @@
         <a href="#" class="whatsapp-float" id="socialToggle">
             <i class="bi bi-share" style="font-size: 20px; color: white;"></i>
         </a>
+        <a href="#" class="scroll-top" id="scrollTop">
+            <i class="bi bi-arrow-up" style="font-size: 20px; color: white;"></i>
+        </a>
     </div>
+
+<!-- Agregar este script antes del cierre del body -->
+<script>
+   // Control del botón scroll top
+   const scrollTop = document.getElementById('scrollTop');
+   
+   window.addEventListener('scroll', function() {
+       if (window.pageYOffset > 300) { // Mostrar después de 300px de scroll
+           scrollTop.style.display = 'flex';
+       } else {
+           scrollTop.style.display = 'none';
+       }
+   });
+    scrollTop.addEventListener('click', function(e) {
+       e.preventDefault();
+       window.scrollTo({
+           top: 0,
+           behavior: 'smooth'
+       });
+    });
+</script>
 
     <!-- Agregar antes del cierre del body -->
 <script>
